@@ -1,0 +1,1 @@
+17/05/2017 47 min 36s, instalación de servidor APACHE (WAMP), inicialización de la web y consulta con el diseño. Creación de Icono: Menú. 
