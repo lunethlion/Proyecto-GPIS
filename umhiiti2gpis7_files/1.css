@@ -1,0 +1,59 @@
+
+#wb_header { background: transparent none repeat scroll left top; height: 200px; }
+#wb_main { background: transparent none repeat scroll left top; height: 70px; padding-bottom: 20px; }
+#wb_footer { background: transparent none repeat-x scroll left top; height: 74px; }
+body { background: #ffffff url("gallery/lovely-ts1481266771.jpg") no-repeat scroll center top; }
+.wb_sbg { background: transparent none repeat-x scroll left top; }
+body, .wb_sbg { min-width: 992px; min-height: 344px; }
+.root { width: 992px; height: 344px; overflow: visible; min-height: 344px; }
+#wb_element_instance0 { left: -390px; top: -9px; min-width: 1980px; width: 1980px; min-height: 70px; height: 70px; display: block; z-index: 3; }
+#wb_element_instance0 > div.wb_shp { background: #373d49; border: 0px solid #C0C0C0; opacity: 1; border-radius: 0px 0px 0px 0px; -moz-border-radius: 0px 0px 0px 0px; -webkit-border-radius: 0px 0px 0px 0px; width: 1980px; height: 70px; }
+#wb_element_instance1 { left: 70px; top: 18px; min-width: 320px; width: 320px; min-height: 24px; height: 24px; display: block; z-index: 4; }
+#wb_element_instance2 { left: 0px; top: 60px; min-width: 1200px; width: 1200px; min-height: 880px; height: 880px; display: block; z-index: 5; }
+#wb_element_instance2 > div.wb_shp { background: #ffffff; border: 0px solid #C0C0C0; opacity: 1; border-radius: 0px 0px 0px 0px; -moz-border-radius: 0px 0px 0px 0px; -webkit-border-radius: 0px 0px 0px 0px; width: 1200px; height: 880px; }
+#wb_element_instance3 { left: -70px; top: 60px; min-width: 1340px; width: 1340px; min-height: 900px; height: 900px; display: block; z-index: 6; }
+#wb_element_instance3 > div.wb_shp { background: #eeeeee; border: 0px solid #C0C0C0; opacity: 1; border-radius: 0px 0px 0px 0px; -moz-border-radius: 0px 0px 0px 0px; -webkit-border-radius: 0px 0px 0px 0px; width: 1340px; height: 900px; }
+#wb_element_instance4 { left: 0px; top: 0px; min-width: 60px; width: 60px; min-height: 60px; height: 60px; display: block; z-index: 7; }
+#wb_element_instance4 img { width: 60px; height: 60px; display: block; position: static; left: 0px; top: 0px; }
+#wb_element_instance5 { left: 60px; top: 140px; min-width: 500px; width: 500px; min-height: 520px; height: 520px; display: block; z-index: 8; }
+#wb_element_instance5 > div.wb_shp { background: #ffffff; border: 5px solid #C0C0C0; opacity: 0.95; border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px; width: 500px; height: 520px; }
+#wb_element_instance6 { left: 620px; top: 140px; min-width: 520px; width: 520px; min-height: 520px; height: 520px; display: block; z-index: 9; }
+#wb_element_instance6 > div.wb_shp { background: #ffffff; border: 5px solid #C0C0C0; opacity: 0.95; border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px; width: 520px; height: 520px; }
+#wb_element_instance7 { left: 80px; top: 100px; min-width: 200px; width: 200px; min-height: 30px; height: 30px; display: block; z-index: 10; }
+#wb_element_instance8 { left: 650px; top: 100px; min-width: 200px; width: 200px; min-height: 30px; height: 30px; display: block; z-index: 11; }
+#wb_element_instance9 { left: 0px; top: 20px; display: block; z-index: 9000; }
+#wb_element_instance10 { left: 0px; top: 20px; display: block; z-index: 9999; }
+
+
+#wb_element_instance1 p:last-child { margin-bottom: 0; }
+#wb_element_instance7 p:last-child { margin-bottom: 0; }
+#wb_element_instance8 p:last-child { margin-bottom: 0; }
+
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1200px) {
+	#wb_header { height: 766px; }
+	#wb_main { height: 70px; }
+	#wb_footer { height: 171px; }
+	body, .wb_sbg { min-width: 1200px; min-height: 1007px; }
+	.root { width: 1200px; height: 1007px; overflow: visible; min-height: 1007px; }
+	#wb_element_instance0 { left: -390px; top: -9px; min-width: 1980px; width: 1980px; min-height: 70px; height: 70px; display: block; }
+	#wb_element_instance0 > div.wb_shp { width: 1980px; height: 70px; }
+	#wb_element_instance1 { left: 70px; top: 18px; min-width: 320px; width: 320px; min-height: 27px; height: 27px; display: block; }
+	#wb_element_instance2 { left: -390px; top: 60px; min-width: 1980px; width: 1980px; min-height: 890px; height: 890px; display: block; }
+	#wb_element_instance2 > div.wb_shp { width: 1980px; height: 890px; }
+	#wb_element_instance3 { left: -340px; top: 60px; min-width: 1880px; width: 1880px; min-height: 900px; height: 900px; display: block; }
+	#wb_element_instance3 > div.wb_shp { width: 1880px; height: 900px; }
+	#wb_element_instance4 { left: 0px; top: 0px; min-width: 60px; width: 60px; min-height: 60px; height: 60px; display: block; }
+	#wb_element_instance4 img { width: 60px; height: 60px; display: block; position: static; left: 0px; top: 0px; }
+	#wb_element_instance5 { left: 60px; top: 140px; min-width: 500px; width: 500px; min-height: 520px; height: 520px; display: block; }
+	#wb_element_instance5 > div.wb_shp { width: 500px; height: 520px; }
+	#wb_element_instance6 { left: 620px; top: 140px; min-width: 520px; width: 520px; min-height: 520px; height: 520px; display: block; }
+	#wb_element_instance6 > div.wb_shp { width: 520px; height: 520px; }
+	#wb_element_instance7 { left: 80px; top: 100px; min-width: 200px; width: 200px; min-height: 30px; height: 30px; display: block; }
+	#wb_element_instance8 { left: 650px; top: 100px; min-width: 200px; width: 200px; min-height: 30px; height: 30px; display: block; }
+	#wb_element_instance9 { left: 0px; top: 20px; display: block; }
+	#wb_element_instance10 { left: 0px; top: 20px; display: block; }
+}
