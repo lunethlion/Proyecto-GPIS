@@ -57,12 +57,14 @@
 			  <input type="submit" value="Enviar" />
 		</form >
 		
-		<button class="boton" value="traducir a XSLM" title="traducir archivo" onclick="exec()"> </button>
+		<button class="boton" value="traducir a XSLM" title="traducir archivo" onclick="trad.php"> </button>
 	</div>
 	<div id="wb_element_instance6" class="wb_element wb_element_shape">
-	<div class="wb_shp">
-		
-	</div>	
+	
+		<form action="./umhiiti2gpis7.html" target="_blank">
+		  <p><textarea name="enhtml" placeholder="Introduce el texto en XML" cols="74" rows="24"></textarea>
+		  </p>
+		</form>
 	</div>
 	<div id="wb_element_instance7" class="wb_element" style=" line-height: normal;">
 		<h3 class="wb-stl-heading3">XML Input</h3>
