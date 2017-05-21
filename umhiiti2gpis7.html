@@ -47,13 +47,19 @@
 	</div>
 	<div id="wb_element_instance5" class="wb_element wb_element_shape">
 	
-		<form action="parser" target="_blank">
+		<form action="./umhiiti2gpis7.html" target="_blank">
 		  <p><textarea name="mensaje" placeholder="Introduce el texto en XML" cols="74" rows="24"></textarea>
 		  </p>
 		  <p>
-		  <input type="submit" value="Enviar mensaje">
+		  <input type="submit" value="Convertir" ">
 		  </p>
+		  
 		</form>
+		<form enctype="multipart/form-data" action="./convarchivo.php" method="POST" >
+		  Archivo XML: <input name="archivo" type="file" />
+			  <input type="submit" value="Enviar" />
+
+		</form >
 	
 	</div>
 	<div id="wb_element_instance6" class="wb_element wb_element_shape">
@@ -63,21 +69,22 @@
 	</div>
 	<div id="wb_element_instance7" class="wb_element" style=" line-height: normal;">
 		<h3 class="wb-stl-heading3">XML Input</h3>
-</div>
-<div id="wb_element_instance8" class="wb_element" style=" line-height: normal;">
-	<h3 class="wb-stl-heading3">HTML Output</h3>
-</div>
-</div>
+	</div>
+	<div id="wb_element_instance8" class="wb_element" style=" line-height: normal;">
+		<h3 class="wb-stl-heading3">HTML Output</h3>
+	</div>
+	</div>
 
 <div class="vbox wb_container" id="wb_main">
 	
 <div id="wb_element_instance9" class="wb_element" style="width: 100%; display: none;">
-						<script type="text/javascript">
-				$(function() {
-					$("#wb_element_instance9").hide();
-				});
-			</script>
-						</div></div>
+	<script type="text/javascript">
+		$(function() {
+			$("#wb_element_instance9").hide();
+		});
+	</script>
+</div></div>
+
 <div class="vbox wb_container" id="wb_footer" style="height: 74px;">
 	
 </div><div class="wb_sbg"></div></div>
