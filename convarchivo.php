@@ -5,9 +5,7 @@ if ($_FILES["archivo"]["error"] > 0)
   }
 else
   {
-  echo "Nombre: " . $_FILES["archivo"]["name"] . "<br />";
-  echo "Tipo: " . $_FILES["archivo"]["type"] . "<br />";
-  echo "Tamaño: ". $_FILES["archivo"]["size"]  . "<br />";
-  echo "Ruta: " . $_FILES["archivo"]["tmp_name"];
+	$arch = $_POST['arch'];
+	echo "Arhivo: " . $arch . ".";
   }
 ?>
