@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <!-- saved from url=(0033)http://moonlightlionheart.esy.es/ -->
-<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<?php
+	include '/Markdownify-master/src/Converter.php';
+	include '/Markdownify-master/src/ConverterExtra.php';
+	include '/Markdownify-master/src/Parser.php';
+?>
 	<title></title>
 	<!--<base href="http://moonlightlionheart.esy.es/">--><base href=".">
 			<meta name="viewport" content="width=992">
@@ -50,8 +54,7 @@
 	<div id="wb_element_instance5" class="wb_element wb_element_shape">
 	
 		<form action="./index.php" method="post" target="_blank">
-		  <p><textarea name="area_izquierda" placeholder="Introduce el texto en HTML" cols="74" rows="24"> 
-		  </textarea>
+		  <p><textarea name="area_izquierda" placeholder="Introduce el texto en HTML" cols="74" rows="24"></textarea>
 		  <input type="submit" value="Transformar"/>
 		  </p>
 		</form>
@@ -65,18 +68,17 @@
 	
 		<form action="./index.php" method="post" target="_blank">
 		<?php
-		echo 'Textarea: <textarea name="area_derecha"> ';
+		
+		echo '<textarea name="area_derecha" placeholder="Resultado de la transformacion" cols="74" rows="24">';
 		if (isset($_POST["area_izquierda"]) && !empty($_POST["area_izquierda"]))
 		{
-			$converter = new HtmlConverter();
-			$html = $_POST["area_izquierda"];
-			$markdown = $converter->convert($html);
+			$converter = new Markdownify\Converter;
+			$markdown = $converter->parseString($_POST["area_izquierda"]);
 			echo $markdown;
 		}		
 		
 		echo "</textarea>";
 		?>
-		
 		</form>
 	</div>
 	<div id="wb_element_instance7" class="wb_element" style=" line-height: normal;">
@@ -107,12 +109,3 @@
 <umsdataelement id="UMSSendDataEventElement"></umsdataelement>
 </html>
 
-<?php
-	function convertir(){
-		echo "ejecutado";
-		$converter = new HtmlConverter();
-		$html = $_POST['enhtml'];
-		$markdown = $converter->convert($html);
-		textomarkdown = $markdown;
-	}
-?>

@@ -49,38 +49,34 @@
 	
 	<div id="wb_element_instance5" class="wb_element wb_element_shape">
 	
-		<form action="./umhiiti2gpis7.html" target="_blank">
-		  <p><textarea name="enhtml" placeholder="Introduce el texto en HTML" cols="74" rows="24"><?php echo prueba($textomarkdown); ?></textarea>
+		<form action="./index.php" method="post" target="_blank">
+		  <p><textarea name="area_izquierda" placeholder="Introduce el texto en HTML" cols="74" rows="24"> 
+		  </textarea>
+		  <input type="submit" value="Transformar"/>
 		  </p>
 		</form>
 		<form enctype="multipart/form-data" action="./convarchivo.php" method="POST" >
 		  Archivo XML: <input name="archivo" type="file" />
 			  <input type="submit" value="Enviar" />
 		</form >
-		
-		<form action="index.php" method="post">
-		Textarea: <textarea name="area_izquierda"></textarea>
-		<input type="submit" value="enviar"/>
-		</form>
-		
-		<form action="index.php" method="post">
-		Textarea: <textarea name="area_derecha">
-		<?php
-			if(isset($_POST["area_izquierda]))
-				echo $_POST["area_izquierda"];
-		?>
-		</textarea>
-		<input type="submit" value="enviar"/>
-		</form>
-		
 	</div>
 	
 	<div id="wb_element_instance6" class="wb_element wb_element_shape">
 	
-		<form action="./umhiiti2gpis7.html" target="_blank">
+		<form action="./index.php" method="post" target="_blank">
+		<?php
+		echo 'Textarea: <textarea name="area_derecha"> ';
+		if (isset($_POST["area_izquierda"]) && !empty($_POST["area_izquierda"]))
+		{
+			$converter = new HtmlConverter();
+			$html = $_POST["area_izquierda"];
+			$markdown = $converter->convert($html);
+			echo $markdown;
+		}		
 		
-		  <textarea name="enmarkdown" placeholder="Aqui va el resultado en Markdown" id="textomarkdown" cols="74" rows="24"></textarea>
-		  
+		echo "</textarea>";
+		?>
+		
 		</form>
 	</div>
 	<div id="wb_element_instance7" class="wb_element" style=" line-height: normal;">
@@ -110,13 +106,3 @@
 </body>
 <umsdataelement id="UMSSendDataEventElement"></umsdataelement>
 </html>
-
-<?php
-	function convertir(){
-		echo "ejecutado";
-		$converter = new HtmlConverter();
-		$html = $_POST['enhtml'];
-		$markdown = $converter->convert($html);
-		textomarkdown = $markdown;
-	}
-?>
