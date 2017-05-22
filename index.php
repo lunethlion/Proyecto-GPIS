@@ -60,7 +60,7 @@
 		</form>
 		<form enctype="multipart/form-data" action="./convarchivo.php" method="POST" >
 		  Archivo XML: <input name="archivo" type="file" />
-			  <input type="submit" value="Enviar" />
+			  <input type="submit" value="archivo" />
 		</form >
 	</div>
 	
@@ -74,6 +74,19 @@
 		{
 			$converter = new Markdownify\Converter;
 			$markdown = $converter->parseString($_POST["area_izquierda"]);
+			echo $markdown;
+		}else if(isset($_POST["archivo"])&& !empty($_POST["archivo"])){
+			$archivo = fopen(["archivo"], "r");
+			 ob_start();
+			require_once 'foo.html';
+			$ = ob_get_clean();
+			// Recorremos todas las lineas del archivo
+			while(!feof($archivo)){
+				// Leyendo una linea
+				$traer = fgets($archivo);
+			}
+			$converter = new Markdownify\Converter;
+			$markdown = $converter->parseString($);
 			echo $markdown;
 		}		
 		
