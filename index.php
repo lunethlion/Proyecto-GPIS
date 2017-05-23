@@ -76,15 +76,10 @@
 			$markdown = $converter->parseString($_POST["area_izquierda"]);
 			echo $markdown;
 		}else if(isset($_POST["archivo"])&& !empty($_POST["archivo"])){
-			$archivo = fopen(["archivo"], "r");
-			 ob_start();
-			require_once 'foo.html';
-			$ = ob_get_clean();
-			// Recorremos todas las lineas del archivo
-			while(!feof($archivo)){
-				// Leyendo una linea
-				$traer = fgets($archivo);
-			}
+			ob_start(); # apertura de bufer
+			fopen(["archivo"], "r");
+			$main = ob_get_contents();
+			ob_end_clean();
 			$converter = new Markdownify\Converter;
 			$markdown = $converter->parseString($);
 			echo $markdown;
