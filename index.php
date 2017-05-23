@@ -58,10 +58,18 @@
 		  <input type="submit" value="Transformar"/>
 		  </p>
 		</form>
-		<form enctype="multipart/form-data" action="./convarchivo.php" method="POST" >
-		  Archivo XML: <input name="archivo" type="file" />
-			  <input type="submit" value="archivo" />
-		</form >
+		
+		<!--<form action="./index.php" enctype="multipart/form-data" method="post" >
+		Archivo XML: <input name="archivo" type="file" />
+		  <input type="submit" value="Transformar archivo" />
+		</form >-->
+		
+		<!--<form action="upload.php" method="post" enctype="multipart/form-data">
+			Select image to upload:
+   		 <input type="file" name="fileToUpload" id="fileToUpload">
+   		 <input type="submit" value="Upload Image" name="submit">
+    	</form>-->
+		
 	</div>
 	
 	<div id="wb_element_instance6" class="wb_element wb_element_shape">
@@ -75,15 +83,15 @@
 			$converter = new Markdownify\Converter;
 			$markdown = $converter->parseString($_POST["area_izquierda"]);
 			echo $markdown;
-		}else if(isset($_POST["archivo"])&& !empty($_POST["archivo"])){
-			ob_start(); # apertura de bufer
-			fopen(["archivo"], "r");
-			$main = ob_get_contents();
-			ob_end_clean();
+		}
+		/*else{
+			fopen($_FILES["fileToUpload"], "r");
+			$htmlarchivo = fread($_FILES["fileToUpload"]);
+			fclose($_FILES["fileToUpload"]);
 			$converter = new Markdownify\Converter;
-			$markdown = $converter->parseString($);
+			$markdown = $converter->parseString($htmlarchivo);
 			echo $markdown;
-		}		
+		}*/		
 		
 		echo "</textarea>";
 		?>

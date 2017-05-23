@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <!-- saved from url=(0033)http://moonlightlionheart.esy.es/ -->
-<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<?php
+	include '/Markdownify-master/src/Converter.php';
+	include '/Markdownify-master/src/ConverterExtra.php';
+	include '/Markdownify-master/src/Parser.php';
+?>
 	<title></title>
 	<!--<base href="http://moonlightlionheart.esy.es/">--><base href=".">
 			<meta name="viewport" content="width=992">
@@ -50,14 +54,13 @@
 	<div id="wb_element_instance5" class="wb_element wb_element_shape">
 	
 		<form action="./index.php" method="post" target="_blank">
-		  <p><textarea name="area_izquierda" placeholder="Introduce el texto en HTML" cols="74" rows="24"> 
-		  </textarea>
+		  <p><textarea name="area_izquierda" placeholder="Introduce el texto en HTML" cols="74" rows="24"></textarea>
 		  <input type="submit" value="Transformar"/>
 		  </p>
 		</form>
 		<form enctype="multipart/form-data" action="./convarchivo.php" method="POST" >
 		  Archivo XML: <input name="archivo" type="file" />
-			  <input type="submit" value="Enviar" />
+			  <input type="submit" value="archivo" />
 		</form >
 	</div>
 	
@@ -65,18 +68,25 @@
 	
 		<form action="./index.php" method="post" target="_blank">
 		<?php
-		echo 'Textarea: <textarea name="area_derecha"> ';
+		
+		echo '<textarea name="area_derecha" placeholder="Resultado de la transformacion" cols="74" rows="24">';
 		if (isset($_POST["area_izquierda"]) && !empty($_POST["area_izquierda"]))
 		{
-			$converter = new HtmlConverter();
-			$html = $_POST["area_izquierda"];
-			$markdown = $converter->convert($html);
+			$converter = new Markdownify\Converter;
+			$markdown = $converter->parseString($_POST["area_izquierda"]);
+			echo $markdown;
+		}else if(isset($_POST["archivo"])&& !empty($_POST["archivo"])){
+			ob_start(); # apertura de bufer
+			fopen(["archivo"], "r");
+			$main = ob_get_contents();
+			ob_end_clean();
+			$converter = new Markdownify\Converter;
+			$markdown = $converter->parseString($);
 			echo $markdown;
 		}		
 		
 		echo "</textarea>";
 		?>
-		
 		</form>
 	</div>
 	<div id="wb_element_instance7" class="wb_element" style=" line-height: normal;">
@@ -106,3 +116,4 @@
 </body>
 <umsdataelement id="UMSSendDataEventElement"></umsdataelement>
 </html>
+
